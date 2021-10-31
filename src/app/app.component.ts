@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bytebank';
+  transferencia: any;
+  valoresComErro: String | undefined;
+  transferir($event: any){
+    console.log($event);
+    this.transferencia = $event;
+  }
+  ehValido($event:String){
+    console.log($event);
+    this.valoresComErro = $event;
+
+  }
 }
